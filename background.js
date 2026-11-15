@@ -22,7 +22,7 @@ const OVERLAY_FILES = ['lib/links.js', 'content/overlay.js'];
 const OFFSCREEN_PATH = 'offscreen/offscreen.html';
 const OFFSCREEN_URL = chrome.runtime.getURL(OFFSCREEN_PATH);
 
-const DEFAULT_TITLE = 'Select an area to OCR (Alt+Shift+S)';
+const DEFAULT_TITLE = 'Select an area to OCR (Ctrl+Z)';
 const BADGE_CLEAR_MS = 6000;
 const CAPTURE_TIMEOUT_MS = 15000;
 const OCR_TIMEOUT_MS = 130000;

@@ -19,7 +19,7 @@
     "open_in_tab": true
   },
   "action": {
-    "default_title": "Select an area to OCR (Alt+Shift+S)",
+    "default_title": "Select an area to OCR (Ctrl+Z)",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
@@ -36,7 +36,7 @@
   "commands": {
     "capture-region": {
       "suggested_key": {
-        "default": "Alt+Shift+S"
+        "default": "Ctrl+Z"
       },
       "description": "Select an area and OCR it"
     }

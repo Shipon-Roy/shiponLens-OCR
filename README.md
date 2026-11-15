@@ -31,7 +31,7 @@ is the only action that uses the network, and it only happens when you click
 - Keeps line breaks, trims trailing whitespace, and reports **No text detected** rather
   than copying an empty string.
 - Light and dark UI that follows the system color scheme.
-- Trigger from the toolbar icon or the `Alt+Shift+S` keyboard shortcut.
+- Trigger from the toolbar icon or the `Ctrl+Z` keyboard shortcut.
 - Graceful failure on `chrome://` pages, the Chrome Web Store, and other restricted
   pages, with a red `!` badge and an explanatory tooltip.
 - The OCR worker stays warm between captures and closes after roughly five minutes idle
@@ -71,7 +71,7 @@ is the only action that uses the network, and it only happens when you click
 
 ### Shortcut
 
-The default shortcut is **`Alt+Shift+S`**. If it is already taken by another app or
+The default shortcut is **`Ctrl+Z`**. If it is already taken by another app or
 extension, Chrome leaves it unassigned; set your own at
 `chrome://extensions/shortcuts` → **ShiponLens** → **Select an area and OCR it**.
 
@@ -88,7 +88,7 @@ Use any of these:
 ### Capture
 
 1. Open a normal `http://` or `https://` page.
-2. Click the ShiponLens toolbar icon, or press `Alt+Shift+S`.
+2. Click the ShiponLens toolbar icon, or press `Ctrl+Z`.
 3. Drag a rectangle around the text. The area outside the selection dims and a live
    pixel-size label appears.
 4. Release the mouse. The overlay disappears, the screen is captured, and the result
@@ -172,7 +172,7 @@ same data is used by the panel, the Options page, and the service worker.
 ## How it works
 
 ```
-toolbar click / Alt+Shift+S
+toolbar click / Ctrl+Z
         │
         ▼
 background.js (service worker)
@@ -388,7 +388,7 @@ Highlights:
   MV3 worker closes it in this Chrome build.)
 - **Manifest:** production permissions are exactly `activeTab`, `scripting`, `offscreen`,
   and `storage`, with no host permissions; `chrome.commands.getAll()` reports
-  `capture-region` → `Alt+Shift+S`.
+  `capture-region` → `Ctrl+Z`.
 
 ### Known testing limitations
 
@@ -444,7 +444,7 @@ extension storage.
 | --- | --- |
 | Nothing happens when clicking the icon | Make sure the tab is a normal web page and is the active tab. Reload the page after installing or updating the extension. |
 | Red `!` badge | Hover the toolbar icon to read the reason. Switch to a normal `http(s)` page; restricted pages are blocked by Chrome. |
-| Shortcut does nothing | Assign it at `chrome://extensions/shortcuts`; another application may already own `Alt+Shift+S`. |
+| Shortcut does nothing | Assign it at `chrome://extensions/shortcuts`; another application may already own `Ctrl+Z`. |
 | `file://` pages fail | Open the extension’s details and enable **Allow access to file URLs**. |
 | “No text detected” | Select a larger area with margins, avoid transparent overlays, or use a cleaner/high-contrast source. Use **Retry**. |
 | Copy failed hint | Click **Copy**, or select the text in the panel and press `Ctrl+C`. Some pages restrict script-driven clipboard access. |
